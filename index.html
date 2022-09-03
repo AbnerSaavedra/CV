@@ -7,8 +7,52 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script>
+  function googleTranslateElementInit(){
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'es',
+        includedLanguages: 'es,en'
+  },
+    'google_translate_element');
+  }
+</script>
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    .languages{
+      display: flex;
+      align-items: baseline;
+      height: 3em;
+    }
+    #google_translate_element select{
+      background:#f6edfd;
+      /* color: #ffc107; */
+      border: none;
+      border-radius:3px;
+      padding:6px 8px
+    }
+    .goog-logo-link{
+      display:none!important;
+      }
+    .goog-te-gadget{
+      color:transparent!important;
+    } 
+    .goog-te-banner-frame{
+      display:none !important;
+    }
+    #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+    .goog-tooltip {
+      display: none !important;
+    }
+    .goog-tooltip:hover {
+      display: none !important;
+    }
+    .goog-text-highlight {
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
 </style>
 <body class="w3-light-grey">
 
@@ -28,10 +72,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <h2 class="w3-center">Abner Saavedra</h2>
           </div>
         </div>
+        <div class="w3-container languages">
+          <p><i class="fa fa-language fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
+          <div id="google_translate_element"></div>
+        </div>
+          <hr style="margin-bottom: 5px;
+          margin-top: 15px;">
         <div class="w3-container">
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Informático</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Quíbor, estado Lara. Venezuela</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:ingenieroabnersaavedra@gmail.com">ingenieroabnersaavedra@gmail.com</a></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:ingenieroabnersaavedra@gmail.com" translate="no">ingenieroabnersaavedra@gmail.com</a></p>
           <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="tel:+58 424 317 4308">(0424) 317-4308</a></p>
           <hr>
 
@@ -184,11 +234,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiencia laboral</h2>
 
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desarrollador frontend (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer">Hispanos soluciones</a></b></h5>
+          <h5 class="w3-opacity"><b>Desarrollador frontend (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>junio - <span class="w3-tag w3-teal w3-round">agosto 2019</span></h6> -->
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>febrero - julio 2022</h6>
           <ul>
-            <li>Desarrollador angular en  <a href="http://www.experteam.com.ec/" target="_blank">Experteam Cía Ltda.</a></li>
+            <li>Desarrollador angular en  <a href="http://www.experteam.com.ec/" target="_blank" translate="no">Experteam Cía Ltda.</a></li>
             <li>Integración y consumo de servicios API REST</li>
             <li>Creación e integración de componentes de software</li>
             <li>Depuración y mejora de funcionalidades existentes</li>
@@ -198,11 +248,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
 
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer">Hispanos soluciones</a></b></h5>
+          <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>junio - <span class="w3-tag w3-teal w3-round">agosto 2019</span></h6> -->
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>julio - diciembre 2021</h6>
           <ul>
-            <li>Desarrollador fullstack NodeJS/Angular en  <a href="https://www.digevoventures.com/" target="_blank">Digevo ventures</a></li>
+            <li>Desarrollador fullstack NodeJS/Angular en  <a href="https://www.digevoventures.com/" target="_blank" translate="no">Digevo ventures</a></li>
             <li>Creación e implementación de modelo de datos</li>
             <li>Desarrollo de servicios API REST</li>
             <li>Integración y consumo de servicios API REST</li>
@@ -216,7 +266,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
 
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desarrollador frontend (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer">Hispanos soluciones</a></b></h5>
+          <h5 class="w3-opacity"><b>Desarrollador frontend (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>junio - <span class="w3-tag w3-teal w3-round">agosto 2019</span></h6> -->
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>agosto 2020 - febrero 2021</h6>
           <ul>
@@ -229,7 +279,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="https://www.jidadesarrollos.com/" target="_blank" rel="noopener noreferrer">Jida Desarrollos</a></b></h5>
+          <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="https://www.jidadesarrollos.com/" target="_blank" rel="noopener noreferrer" translate="no">Jida Desarrollos</a></b></h5>
           <!-- <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>junio - <span class="w3-tag w3-teal w3-round">agosto 2019</span></h6> -->
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>jun - ago 2019</h6>
           <ul>
@@ -241,7 +291,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Desarrollador web frontend (modo remoto) / <a href="https://growads.net/" target="_blank">Grow Ads</a></b></h5>
+          <h5 class="w3-opacity"><b>Desarrollador web frontend (modo remoto) / <a href="https://growads.net/" target="_blank" translate="no">Grow Ads</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>ene - feb 2019</h6>
           <ul>
             <li>Desarrollo web completo <a href="https://mzsociedades.com.ar/" target="_blank">MZ sociedades</a></li>
