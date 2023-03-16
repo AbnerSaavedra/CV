@@ -4,25 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link rel="stylesheet" href="css/style.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="./js/translate_google.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <script>
   function googleTranslateElementInit(){
+
+    var ckDomain;
+  for (var ckDomain = window.location.hostname.split("."); 2 < ckDomain.length;){
+    ckDomain.shift();
+  }
+  ckDomain = ";domain=" + ckDomain.join(".");
+  // domain cookie
+  document.cookie = "googtrans=/sv/en; expires=Thu, 07-Mar-2047 20:22:40 GMT; path=/" + ckDomain;
+  // host-only cookie (with no domain name definition)
+  document.cookie = "googtrans=/sv/en; expires=Thu, 07-Mar-2047 20:22:40 GMT; path=/";
+
+    document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
+    // alert( document.cookie );
+
     new google.translate.TranslateElement(
       {
         pageLanguage: 'es',
-        includedLanguages: 'es,en'
+        includedLanguages: 'es,en',
   },
     'google_translate_element');
   }
 
-  $('body').on('change', '#google_translate_element select', function(){
+  window.onload = function () {
+
+    var ln = navigator.language || navigator.userLanguage;
+    var cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+    $('#downloadCV').attr('href', cvURL)
+
+    if (ln == 'es-ES') { 
+      $('#downloadCV').attr('href', cvURL)
+    } else if (ln == 'en-EN') {
+      var cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
+      $('#downloadCV').attr('href', cvURL)
+    }
+
+}
+
+  /*window.onload = function () {
+
+    var ln = navigator.language || navigator.userLanguage;
+    var cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+    $('#downloadCV').attr('href', cvURL)
+
+    if (ln == 'es-ES') { 
+      $('#downloadCV').attr('href', cvURL)
+    } else if (ln == 'en-EN') {
+      var cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
+      $('#downloadCV').attr('href', cvURL)
+    }
+
+}
+
+   $('body').on('change', '#google_translate_element select', function(){
 
     language = $('#google_translate_element select').val()
     var cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+
+    console.log("Idioma detectado: "+cvURL)
 
     if(language == 'es'){
       $('#downloadCV').attr('href', cvURL)
@@ -31,7 +78,8 @@
       var cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
       $('#downloadCV').attr('href', cvURL)
     }
-  });
+    console.log("Idioma detectado: "+cvURL)
+  }); */
 </script>
 <style>
     html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
@@ -91,9 +139,10 @@
           <p><i class="fa fa-language fa-fw w3-margin-right w3-large w3-text-teal"></i></p>
           <div id="google_translate_element"></div>
         </div>
+
         <div class="w3-container downloadCV">
           <p><i class="fa fa-download fa-fw w3-margin-right w3-large w3-text-teal"></i>
-             <a href="./assests/CV_2022/CV Abner Saavedra - Español.pdf" id="downloadCV" target="_blank" download="CV Abner Saavedra - Español.pdf">Descargar CV</a>
+             <a href="./assests/CV_2022/CV Abner Saavedra - Español.pdf" id="downloadCV" target="_blank" download="CV Abner Saavedra">Descargar CV</a>
           </p>
         </div>
           <hr style="margin-bottom: 5px;
@@ -256,6 +305,23 @@
       <div class="w3-container w3-card w3-white w3-margin-bottom">
 
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experiencia laboral</h2>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>octubre 2022 - enero 2023</h6>
+          <ul>
+            <li>Desarrollador fullstack NodeJS/Angular  <a href="https://ragatex.com/" target="_blank" translate="no">Ragatex.</a></li>
+            <li>Creación e implementación de modelo de datos</li>
+            <li>Desarrollo de servicios API REST</li>
+            <li>Integración y consumo de servicios API REST</li>
+            <li>Prueba y depuración de servicios API REST</li>
+            <li>Creación e integración de componentes de software</li>
+            <li>Depuración y mejora de funcionalidades existentes</li>
+            <li>Maquetación web HTML y CSS</li>
+            <li>Integración continúa de avances</li>
+          </ul>
+          <hr>
+        </div>
 
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Desarrollador frontend (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
@@ -500,10 +566,36 @@
   <a href="https://www.linkedin.com/in/abner-saavedra/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
-<script>
-
-    
-
-</script>
 </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+        };
+        $('.goog-te-combo').live('change',function(){
+            getSelectedlang();
+        });
+
+        setTimeout(function() {
+              getSelectedlang(); //Calls after 5 sec
+        }, 5000);
+
+        function getSelectedlang(){
+            language = $("select.goog-te-combo option:selected").text();
+            console.log(language);
+
+            // language = $('#google_translate_element select').val()
+            var cvURL = ""
+
+            if(language == 'español'){
+              cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+              $('#downloadCV').attr('href', cvURL)
+            }else{
+              if(language == 'inglés')
+              var cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
+              $('#downloadCV').attr('href', cvURL)
+            }
+            console.log("Idioma detectado: "+cvURL)
+          }
+      </script>
 </html>
