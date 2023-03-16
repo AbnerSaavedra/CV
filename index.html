@@ -10,7 +10,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <!-- <script src="./js/translate_google.js"></script> -->
-<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script>
   function googleTranslateElementInit(){
 
@@ -33,6 +34,32 @@
         includedLanguages: 'es,en',
   },
     'google_translate_element');
+
+    $('.goog-te-combo').live('change',function(){
+            getSelectedlang();
+        });
+
+        setTimeout(function() {
+              getSelectedlang(); //Calls after 5 sec
+        }, 5000);
+
+        function getSelectedlang(){
+            language = $("select.goog-te-combo option:selected").text();
+            console.log(language);
+
+            // language = $('#google_translate_element select').val()
+            var cvURL = ""
+
+            if(language == 'español'){
+              cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+              $('#downloadCV').attr('href', cvURL)
+            }else{
+              if(language == 'inglés')
+              var cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
+              $('#downloadCV').attr('href', cvURL)
+            }
+            console.log("Idioma detectado: "+cvURL)
+          }
   }
 
   window.onload = function () {
@@ -311,7 +338,7 @@
           <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>octubre 2022 - enero 2023</h6>
           <ul>
-            <li>Desarrollador fullstack NodeJS/Angular en<a href="https://ragatex.com/" target="_blank" translate="no">Ragatex.</a></li>
+            <li>Desarrollador fullstack NodeJS/Angular en <a href="https://ragatex.com/" target="_blank" translate="no">Ragatex.</a></li>
             <li>Creación e implementación de modelo de datos</li>
             <li>Desarrollo de servicios API REST</li>
             <li>Integración y consumo de servicios API REST</li>
@@ -568,10 +595,22 @@
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 </body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script type="text/javascript">
+<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+     <script type="text/javascript">
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+            /* new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'es,en' }, "google_translate_element"); */
+
+            var ckDomain;
+            for (var ckDomain = window.location.hostname.split("."); 2 < ckDomain.length;){
+              ckDomain.shift();
+            }
+            ckDomain = ";domain=" + ckDomain.join(".");
+            // domain cookie
+            document.cookie = "googtrans=/sv/en; expires=Thu, 07-Mar-2047 20:22:40 GMT; path=/" + ckDomain;
+            // host-only cookie (with no domain name definition)
+            document.cookie = "googtrans=/sv/en; expires=Thu, 07-Mar-2047 20:22:40 GMT; path=/";
+
+              document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
         };
         $('.goog-te-combo').live('change',function(){
             getSelectedlang();
@@ -598,5 +637,5 @@
             }
             console.log("Idioma detectado: "+cvURL)
           }
-      </script>
+      </script> -->
 </html>
