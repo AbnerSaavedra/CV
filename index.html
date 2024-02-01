@@ -15,7 +15,7 @@
   window.onload = function () {
     var ln = navigator.language || navigator.userLanguage;
     console.log('Onload: '+ln)
-    var cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
+    var cvURL = "./assets/CV/CV Abner Saavedra - Spanish.pdf"
     $('#downloadCV').attr('href', cvURL)
   }
 </script>
@@ -100,7 +100,7 @@
 
         <div class="w3-container downloadCV">
           <p><i class="fa fa-download fa-fw w3-margin-right w3-large w3-text-teal"></i>
-             <a href="./assests/CV_2022/CV Abner Saavedra - Español.pdf" id="downloadCV" target="_blank" download="CV Abner Saavedra">Descargar CV</a>
+             <a href="./assets/CV/CV Abner Saavedra - Spanish.pdf" id="downloadCV" target="_blank" download="CV Abner Saavedra">Descargar CV</a>
           </p>
         </div>
           <hr style="margin-bottom: 5px;
@@ -305,7 +305,7 @@
           <h5 class="w3-opacity"><b>Desarrollador fullstack (modo remoto) / <a href="http://www.hispanossoluciones.com/" target="_blank" rel="noopener noreferrer" translate="no">Hispanos soluciones</a></b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>octubre 2022 - enero 2023</h6>
           <ul>
-            <li>Desarrollador fullstack NodeJS/Angular en <a href="https://ragatex.com/" target="_blank" translate="no">Ragatex.</a></li>
+            <li>Desarrollador fullstack NodeJS/Angular en <a href="https://ragatex.com/" target="_blank" translate="no"> Ragatex.</a></li>
             <li>Creación e implementación de modelo de datos</li>
             <li>Desarrollo de servicios API REST</li>
             <li>Integración y consumo de servicios API REST</li>
@@ -580,7 +580,7 @@
     new google.translate.TranslateElement(
       {
         pageLanguage: 'es',
-        includedLanguages: 'es,en',
+        includedLanguages: 'es,en,pt',
         Layout: google.translate.TranslateElement.InlineLayout.VERTICAL
   },
     'google_translate_element');
@@ -602,19 +602,19 @@
             var nameDownload = ""
 
             if(language == 'español'){
-              cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
-              nameDownload = "CV Ing. Abner Saavedra - Español"
+              cvURL = "./assets/CV/CV Abner Saavedra - Spanish.pdf"
+              nameDownload = "CV Ing. Abner Saavedra - Spanish"
               $('#downloadCV').attr('href', cvURL)
               $('#downloadCV').attr('download', nameDownload)
             }else{
                 if(language == 'inglés'){
-                  cvURL = "./assests/CV_2022/CV Abner Saavedra - Inglés.pdf"
-                  nameDownload = "CV Ing. Abner Saavedra - Inglés"
+                  cvURL = "./assets/CV/CV Abner Saavedra - English.pdf"
+                  nameDownload = "CV Ing. Abner Saavedra - English"
                   $('#downloadCV').attr('href', cvURL)
                   $('#downloadCV').attr('download', nameDownload)
                 }else{
-                cvURL = "./assests/CV_2022/CV Abner Saavedra - Español.pdf"
-                nameDownload = "CV Ing. Abner Saavedra - Español"
+                cvURL = "./assets/CV/CV Abner Saavedra - Spanish.pdf"
+                nameDownload = "CV Ing. Abner Saavedra - Spanish"
                 $('#downloadCV').attr('href', cvURL)
                 $('#downloadCV').attr('download', nameDownload)
               }
